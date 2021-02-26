@@ -1,0 +1,108 @@
+
+
+
+html{
+    background-color: #19252E;
+}
+body{
+    width: 80%;
+    background-color: #faffff;
+    margin: 0 auto;
+    margin-top: 20px;
+}
+header{
+    max-width: 90%;
+    margin: 0 auto;
+    padding: 20px 0;
+}
+footer{
+    width: 100%;
+    background-color: #c36d15;
+    margin: 0 auto;
+    margin-top: 29px;
+}
+/*estilos de texto*/
+
+h1{
+    color: #b0373b;
+    font-family:'Roboto', sans-serif;
+    font-size:2.8em;
+}
+h2{
+    color: #005f7f;
+    font-family:'Roboto', sans-serif;
+    font-size:2.2em;
+}
+h3{
+    color: #005f7f;
+    font-family:'Roboto', sans-serif;
+    font-size:1.8em;
+}
+p{
+    font-size:1.2em;
+    font-family:'Roboto', sans-serif;
+    text-align: left;
+    padding: 1em;
+}
+/*bloques */
+.container{
+    width: 100%;
+    text-align:center;
+}
+.cursos{
+    width:300px;
+    display: inline-block;
+    margin: 1em 2em;
+    border: 3px;
+    border-color: black;
+    border-style:solid;
+    vertical-align: top;
+}
+.foto{
+    width:100%;
+}
+.pie{
+
+    margin: 0 auto;
+    padding: 10px 0px;
+    text-align:center;
+}
+#foto-pie{
+    max-width:70%;
+}
+/*flexbox*/
+.wrapper{/*caja contenedora de todos los cursos*/
+display: flex;/*ya son flexibles*/
+flex-wrap: wrap; /*si no caben las cajas pasaran abajo*/
+justify-content: space-between;/*enter(centra), flex-end(los mueve a la derecha) spacer-around, evently /comprobar haciendo la pantalla mas grande y pequeña/ */
+}
+.cursos{
+flex-grow: 1;/*hace que cada hijo ocupe todo el ancho disponible , el numero es el indice (1) son todos tendira que poner un id cada hijo si quiero hacer cada uno diferente*/
+
+}
+#maestro{ /*hijo del medio*/
+order: 1; /*cambia este hijo por el tercer puesto, pasaria de estar en el medio a estar abajo*/
+}
+
+/*the nedia query*/
+
+@media (max-width : 400px) { 
+    body{
+        width: 100%;
+        background-color: #faffff;
+        margin: 0 auto;
+     
+    } 
+    hr{
+        height: 1px;
+        background-color:  #b0373b;
+    }
+
+    .cursos{
+        margin: 1em 0em;
+        border: none;
+        }
+        p{
+            text-align: center;
+        }
+}
